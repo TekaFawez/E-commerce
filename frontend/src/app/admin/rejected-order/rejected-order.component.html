@@ -1,0 +1,137 @@
+   <!-- Page Header -->
+   <div class="page-header">
+    <div class="row">
+      <div class="col">
+        <h3 class="page-title">Commandes rejetées</h3>
+      </div>
+      <div class="col-auto text-right">
+        <a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
+          <i class="fas fa-filter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /Page Header -->
+
+  <!-- Search Filter -->
+  <div class="card filter-card" id="filter_inputs">
+    <div class="card-body pb-0">
+      <form>
+        <div class="row filter-row">
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <label>User Name</label>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <label>Order Date</label>
+              <div class="cal-icon">
+                <input class="form-control datetimepicker" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /Search Filter -->
+
+  <ul class="nav nav-tabs menu-tabs">
+    <li class="nav-item ">
+      <a class="nav-link" routerLink="/admin/order">Toutes les commandes <span class="badge badge-primary">10</span></a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/pending-order">En attente <span class="badge badge-primary">3</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  routerLink="/admin/accepted-order">Acceptées <span class="badge badge-primary">2</span></a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link"  routerLink="/admin/rejected-order">Rejectées <span class="badge badge-primary">2</span></a>
+    </li>
+  </ul>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover table-center mb-0 datatable">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Adhérents</th>
+                <th>Email</th>
+                <th>Departement</th>
+                <th>Quantité</th>
+                <th>Status</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td>11 Sep 2020</td>
+                  <td>
+                        <span class="table-avatar">
+                          <a routerLink="#" class="avatar avatar-sm mr-2">
+                            <img class="avatar-img rounded-circle" alt="" src='../../../assets/admin/img/customer/user-06.jpg'>
+                          </a>
+                          <a href="javascript:void(0);">Stephen Wilson</a>
+                        </span>
+                  </td>
+                  <td>
+                        <span class="table-avatar">
+                          <a routerLink="#" class="avatar avatar-sm mr-2">
+                            <img class="avatar-img rounded-circle" alt="" src='../../../assets/admin/img/provider/provider-06.jpg'>
+                          </a>
+                          <a href="javascript:void(0);">Marya Ruiz</a>
+                        </span>
+                  </td>
+                  <td>Computer & Server AMC Service</td>
+                  <td>$80</td>
+                  <td>
+                    <label class="badge badge-warning">Rejected</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>10 Sep 2020</td>
+                  <td>
+                        <span class="table-avatar">
+                          <a routerLink="#" class="avatar avatar-sm mr-2">
+                            <img class="avatar-img rounded-circle" alt="" src='../../../assets/admin/img/customer/user-07.jpg'>
+                          </a>
+                          <a href="javascript:void(0);">Ryan Rodriguez</a>
+                        </span>
+                  </td>
+                  <td>
+                        <span class="table-avatar">
+                          <a routerLink="#" class="avatar avatar-sm mr-2">
+                            <img class="avatar-img rounded-circle" alt="" src='../../../assets/admin/img/provider/provider-07.jpg'>
+                          </a>
+                          <a href="javascript:void(0);">Richard Hughes</a>
+                        </span>
+                  </td>
+                  <td>Interior Designing</td>
+                  <td>$5</td>
+                  <td>
+                    <label class="badge badge-success">Amount refund to Provider</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

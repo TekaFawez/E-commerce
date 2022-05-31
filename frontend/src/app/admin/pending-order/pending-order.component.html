@@ -1,0 +1,143 @@
+<!-- Page Header -->
+<div class="page-header">
+  <div class="row">
+    <div class="col">
+      <h3 class="page-title">Commandes en attente</h3>
+    </div>
+  </div>
+</div>
+<!-- /Page Header -->
+  <!-- Search Filter -->
+  <div class="card filter-card" id="filter_inputs">
+    <div class="card-body pb-0">
+      <form>
+        <div class="row filter-row">
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <label>Subscriber Name</label>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <label>Order Date</label>
+              <div class="cal-icon">
+                <input class="form-control datetimepicker" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /Search Filter -->
+
+<ul class="nav nav-tabs menu-tabs">
+  <li class="nav-item ">
+    <a class="nav-link"  routerLink="/admin/order">Toutes les commandes <span class="badge badge-primary">10</span></a>
+  </li>
+
+  <li class="nav-item active">
+    <a class="nav-link"  routerLink="/admin/pending-order">En attente <span class="badge badge-primary">3</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"   routerLink="/admin/accepted-order">Acceptées <span class="badge badge-primary">2</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"   routerLink="/admin/rejected-order">Rejectées <span class="badge badge-primary">2</span></a>
+  </li>
+</ul>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover table-center mb-0 datatable">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Adhérents</th>
+              <th>Email</th>
+              <th>Depatement</th>
+              <th>Quantité</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>14 Sep 2020</td>
+                <td>
+                            <span class="table-avatar">
+                              <a routerLink="#" class="avatar avatar-sm mr-2">
+                                <img class="avatar-img rounded-circle" alt="" src='assets/admin/img/customer/user-03.jpg'>
+                              </a>
+                              <a href="javascript:void(0);">Ramona Kingsley</a>
+                            </span>
+                </td>
+                <td>
+                            <span class="table-avatar">
+                              <a routerLink="#" class="avatar avatar-sm mr-2">
+                                <img class="avatar-img rounded-circle" alt="" src='assets/admin/img/provider/provider-03.jpg'>
+                              </a>
+                              <a href="javascript:void(0);">Yolanda Potter</a>
+                            </span>
+                </td>
+                <td>Electric Panel Repairing Service</td>
+                <td>$45</td>
+                <td>
+                  <label class="badge badge-dark">Pending</label>
+                </td>
+                <td>
+                  <a routerLink="/admin/order/order-detail" class="btn btn-sm bg-info-light">
+                    <i class="far fa-eye mr-1"></i> Review
+                  </a>
+
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>13 Sep 2020</td>
+                <td>
+                            <span class="table-avatar">
+                              <a routerLink="#" class="avatar avatar-sm mr-2">
+                                <img class="avatar-img rounded-circle" alt="" src='assets/admin/img/customer/user-04.jpg'>
+                              </a>
+                              <a href="javascript:void(0);">Ricardo Lung</a>
+                            </span>
+                </td>
+                <td>
+                            <span class="table-avatar">
+                              <a routerLink="#" class="avatar avatar-sm mr-2">
+                                <img class="avatar-img rounded-circle" alt="" src='assets/admin/img/provider/provider-04.jpg'>
+                              </a>
+                              <a href="javascript:void(0);">Ricardo Flemings</a>
+                            </span>
+                </td>
+                <td>Steam Car Wash</td>
+                <td>$14</td>
+                <td>
+                  <label class="badge badge-dark">Pending</label>
+                </td>
+                <td>
+                  <a routerLink="admin/order/order-detail" class="btn btn-sm bg-info-light">
+                    <i class="far fa-eye mr-1"></i> Review
+                  </a>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<!-- Fawez TEKA
+    https://www.linkedin.com/in/fawez-teka/
+    https://github.com/TekaFawez
+   Copyright © Fawez TEKA . All rights reserved. -->
+
+<p-toast></p-toast>
+
+<div class="row">
+    <div class="col-xl-8 offset-xl-2">
+
+        <!-- Page Header -->
+        <p-card [header]="editmode ? 'Edit Category' : 'Add Category'" subheader="You can add or edit categories here">
+        </p-card>
+        <!-- <div class="page-header">
+
+          <div class="row">
+            <div class="col">
+              <h3 class="page-title"> <pre>  <b>Add Category</b>     </pre> </h3>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- /Page Header -->
+
+
+        <div class="p-grid p-mb-5">
+            <div class="card-body">
+
+                <!-- Form -->
+                <!-- <form >
+              <div class="form-group">
+                <label>      Category Name</label>
+                <input class="form-control" name="name" formControlName="name" required type="text">
+              </div>
+              <div class="form-group">
+                <label>icon</label>
+                <input class="form-control" name="icon" formControlName="icon" required type="text">
+              </div>
+
+              <div class="mt-4">
+                <button  class="btn btn-primary" type="button" routerLink="/admin/categories">Add Category</button>
+                <button class="nav-item nav-link-edit" [routerLink]="['/admin/categories']"> cancel</button >
+                </div>
+
+            </form> -->
+                <p-button styleClass="p-button-primary p-mr-2" [label]="editmode ? 'Update' : 'Create'" icon="pi pi-plus" (click)="onSubmit()"></p-button>
+                <p-button styleClass="p-button-secondary" label="Cancle" icon="pi pi-arrow-circle-left"></p-button>
+                <!-- <form [formGroup]="form" >
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Name </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="add name">
+                <small *ngIf=" categoryForm['name'].invalid && isSubmitted" class="p-error"
+                >Name is required</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Icon </label>
+                <input formControlName="name" id="id" type="text" pInputText />
+                <small *ngIf=" categoryForm['name'].invalid && isSubmitted" class="p-error"
+                >Name is required</small>
+              </div>
+
+
+
+            </form> -->
+                <form [formGroup]="form">
+                    <div class="p-fluid p-formgrid p-grid">
+                        <div class="p-field p-col">
+                            <label for="name">Name</label>
+                            <input formControlName="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add name">
+                            <small *ngIf=" categoryForm['name'].invalid && isSubmitted" class="p-error">Name is required</small
+                  >
+                </div>
+                <div class="p-field p-col">
+                  <label for="icon">Icon</label>
+                  <input formControlName="icon" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add icon">
+                   <small *ngIf=" categoryForm['icon'].invalid && isSubmitted" class="p-error"
+                    >Icon is required</small >
+                </div>
+                <div class="p-field p-col">
+                  <label for="color">color</label> <br>
+                  <p-colorPicker formControlName="color"></p-colorPicker>
+
+                </div>
+
+              </div>
+
+            </form>
+            <!-- Form -->
+
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,74 @@
+
+<div class="row">
+  <div class="col-xl-8 offset-xl-2">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="row">
+        <div class="col">
+          <h3 class="page-title">Edit Products</h3>
+        </div>
+      </div>
+    </div>
+    <!-- /Page Header -->
+
+    <div class="card">
+      <div class="card-body">
+
+        <!-- Form -->
+        <form action="Products">
+          <div class="form-group">
+            <label>Nom de Product </label>
+            <input class="form-control" type="text" formControlName="product_name" name="product_name" required>
+          </div>
+          <div class="form-group">
+            <label>Récaputilatif</label>
+            <input class="form-control" type="text" required formControlName="recapitulatif" name="recapitulatif">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" type="text" required formControlName="description" name="description">
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select class="form-control select">
+              <option>Select Category</option>
+              <option>Informatique</option>
+              <option>Telephonie </option>
+              <option> Electromenager</option>
+
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Marque</label>
+            <input class="form-control" type="text" required formControlName="marque" name="marque">
+          </div>
+          <div class="form-group">
+            <label>Quantity</label>
+            <input class="form-control" type="text" required formControlName="quantity" name="quantity">
+          </div>
+
+          <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" type="text" required formControlName="sale_price" name="sale_price">
+          </div>
+
+          <div class="form-group">
+            <label>Product Image</label>
+            <input class="form-control" type="file" required>
+          </div>
+          <div class="mt-4">
+            <button class="btn btn-primary" type="submit">Save </button>
+            <a class="btn btn-link">Cancel</a>
+          </div>
+        </form>
+        <!-- /Form -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

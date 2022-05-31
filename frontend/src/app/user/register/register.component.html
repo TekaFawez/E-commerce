@@ -1,0 +1,222 @@
+<!-- <section id="aa-catg-head-banner">
+    <img src="../../../assets/images/login-inner-bnr.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+     <div class="container">
+      <div class="aa-catg-head-banner-content">
+
+
+      </div>
+     </div>
+   </div>
+  </section>
+
+
+
+
+  <section id="aa-myaccount">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-12">
+  <div class="aa-myaccount-area">
+
+    <div class="aa-myaccount-login">
+    <h4>Register</h4>
+    <form [formGroup]="loginFormGroup">
+      <div class="p-grid p-mt-6">
+        <div class="p-col-12">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+            <input
+              type="name"
+              formControlName="name"
+              pInputText
+              placeholder="name"
+            />
+          </div>
+          <small *ngIf="loginForm['name'].invalid && isSubmitted" class="p-error"
+            >name is required
+          </small>
+        </div>
+
+
+
+
+        <div class="p-col-12">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" formControlName="email" pInputText placeholder="Email" />
+          </div>
+          <small *ngIf="loginForm['email'].invalid && isSubmitted" class="p-error"
+            ><span *ngIf="loginForm['email'].errors?.['required']">email is required</span>
+            <span *ngIf="loginForm['email'].errors?.['email']">email is invalid</span></small
+          >
+        </div>
+        <div class="p-col-12">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+            <input
+              type="password"
+              formControlName="password"
+              pInputText
+              placeholder="Password"
+            />
+          </div>
+          <small *ngIf="loginForm['password'].invalid && isSubmitted" class="p-error"
+            >Password is required
+          </small>
+        </div>
+        <div class="p-col-12">
+
+
+          <label for="color">Phone</label><br />
+          <p-inputMask
+            mask="(999) 999-9999"
+            formControlName="phone"
+            placeholder="(999) 999-9999"
+          ></p-inputMask>
+          <small *ngIf="loginForm['phone'].invalid && isSubmitted" class="p-error"
+            >phone is required</small
+          >
+        </div>
+        <div class="p-col-12">
+          <p-button label="Submit" styleClass="full-btn" (onClick)="onSubmit()"></p-button>
+        </div>
+
+      </div>
+    </form>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  </div>
+
+
+
+   -->
+<!-- catg header banner section -->
+<!-- <section id="aa-catg-head-banner">
+    <img src="../../../assets/images/Registration-1920x300.jpg" alt="fashion img">
+    <div class="aa-catg-head-banner-area">
+        <div class="container">
+            <div class="aa-catg-head-banner-content">
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aa-myaccount">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aa-myaccount-area">
+
+                    <div class="aa-myaccount-register">
+                        <h4>Register</h4>
+                        <form action="" class="aa-login-form" [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+                            <label for=""><b>Name</b><span>*</span></label>
+                            <input type="text" placeholder="Name" formControlName="name">
+                            <label for=""><b>Email address</b><span>*</span></label>
+                            <input type="text" placeholder="email" formControlName="email">
+                            <label for=""><b>Password</b><span>*</span></label>
+                            <input type="password" placeholder="Password" formControlName="password">
+                            <label for=""><b>Phone</b><span>*</span></label>
+                            <input type="text" placeholder="Phone" formControlName="phone">
+                            <label for=""><b>Street</b></label>
+                            <input type="text" placeholder="Street" formControlName="street">
+                            <label for=""><b>Apartment</b></label>
+                            <input type="text" placeholder="Apartment" formControlName="apartment">
+                            <label for=""><b>Zip code</b></label>
+                            <input type="text" placeholder="Zip code" formControlName="Zip">
+                            <label for=""><b>City</b></label>
+                            <input type="text" placeholder="City" formControlName="city">
+                            <button type="submit" class="aa-browse-btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> -->
+<p-toast></p-toast>
+<div class="user-page">
+    <p-card subheader>
+        <div class="p-grid p-mb-5">
+            <div class="p-col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left"></div>
+                    <!-- <div class="p-toolbar-group-right">
+                        <p-button styleClass="p-button-primary p-mr-2" icon="pi pi-plus" (click)="onSubmit()"></p-button>
+
+                    </div> -->
+                </p-toolbar>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <form [formGroup]="loginFormGroup">
+                    <div class="p-fluid p-formgrid p-grid">
+                        <div class="p-field p-col-4">
+                            <label for="name">Name</label>
+                            <input formControlName="name" id="name" type="text" pInputText />
+                            <small *ngIf="userForm['name'].invalid && isSubmitted" class="p-error">Name is required</small
+              >
+            </div>
+            <div class="p-field p-col-4">
+              <label for="email">Email</label>
+              <input formControlName="email" id="email" type="text" pInputText />
+              <small *ngIf="userForm['email'].invalid && isSubmitted" class="p-error"
+                ><span *ngIf="userForm['email'].errors?.['required']">email is required</span>
+                <span *ngIf="userForm['email'].errors?.['email']">email is invalid</span></small
+              >
+            </div>
+            <div class="p-field p-col-4">
+              <label for="password">Password</label>
+              <input formControlName="password" id="password" type="password" pInputText />
+              <small *ngIf="userForm['password'].invalid && isSubmitted" class="p-error"
+                >Password is required</small
+              >
+            </div>
+            <div class="p-field p-col-4">
+              <label for="color">Phone</label><br />
+              <p-inputMask
+                mask="(999) 999-9999"
+                formControlName="phone"
+                placeholder="(999) 999-9999"
+              ></p-inputMask>
+              <small *ngIf="userForm['phone'].invalid && isSubmitted" class="p-error"
+                >phone is required</small
+              >
+            </div>
+
+          </div>
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-4">
+              <label for="street">Street</label>
+              <input formControlName="street" id="street" type="text" pInputText />
+            </div>
+            <div class="p-field p-col-4">
+              <label for="street">Apartment</label>
+              <input formControlName="apartment" id="apartment" type="text" pInputText />
+            </div>
+            <div class="p-field p-col-4">
+              <label for="street">Zip Code</label>
+              <input formControlName="zip" id="zip" type="text" pInputText />
+            </div>
+            <div class="p-field p-col-4">
+              <label for="city">City</label>
+              <input formControlName="city" id="city" type="text" pInputText />
+            </div>
+            <div class="p-col-12">
+              <p-button label="Register" styleClass="full-btn" (onClick)="onSubmit()"></p-button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+</div>

@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <div class="sidebar-brand">
+      <h2><span class="lab la-accusoft" ></span><span>Accusoft</span></h2>
+  </div>
+  <div class="sidebar-menu">
+      <ul>
+          <li>
+              <a [routerLink]="['/admin']" class="active"><span class="las la-igloo"></span>
+              <span>Dashboard</span></a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/users']"><span class="las la-users"></span>
+              <span>Users</span></a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/categories']"  ><span class="las la-clipboard-list"></span>
+              <span>Categories</span></a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/products']"><span class="las la-clipboard-list"></span>
+              <span>Products</span></a>
+          </li>
+          <li>
+              <a [routerLink]="['/admin/order']"><span class="las la-shopping-bag"></span>
+              <span>Orders</span></a>
+          </li>
+          <li>
+            <a class="logout"><i class="pi pi-sign-out" (click)="logoutUser()"></i> Logout</a>
+          </li>
+
+
+
+      </ul>
+
+  </div>
+</div>
