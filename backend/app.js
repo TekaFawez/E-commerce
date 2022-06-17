@@ -3,7 +3,7 @@
 //     https://github.com/TekaFawez
 //    Copyright © Fawez TEKA . All rights reserved.
 const express = require('express');
-const morgan = require('morgan');
+const morgan = require('morgan'); //log http requiset
 const mongoose = require('mongoose');
 const authJwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handelr')
@@ -38,9 +38,9 @@ const ordersRouter = require('./routers/orders');
 
 
 //middeleware
-app.use(express.json());
-app.use(morgan('tiny'));
-app.use(authJwt());
+
+app.use(express.json()); //replace body-parser
+app.use(morgan('tiny')); //vue in the terminal http request from front end
 app.use("/public/uploads", express.static(__dirname + "/public/uploads"));
 
 app.use(errorHandler);
